@@ -7,6 +7,24 @@ plugins {
 }
 
 allprojects {
+    repositories {
+        maven {
+            name = "lss233MirrorForgedev"
+            url = uri("https://crystal.app.lss233.com/repositories/forgedev")
+        }
+        maven {
+            name = "lss233MirrorReleases"
+            url = uri("https://crystal.app.lss233.com/repositories/releases")
+        }
+        maven {
+            name = "lss233MirrorMinecraft"
+            url = uri("https://crystal.app.lss233.com/repositories/minecraft")
+        }
+        maven {
+            name = "lss233MirrorSnapshots"
+            url = uri("https://crystal.app.lss233.com/repositories/snapshots")
+        }
+    }
     group = properties["group"] as String + "." + properties["id"] as String
     version = properties["version"] as String
     description = properties["description"] as String

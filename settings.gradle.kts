@@ -4,8 +4,27 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 dependencyResolutionManagement {
     repositories {
-        // mavenLocal()
-        
+        mavenLocal()
+
+        maven {
+            name = "lss233MirrorForgedev"
+            url = uri("https://crystal.app.lss233.com/repositories/forgedev")
+        }
+        maven {
+            name = "lss233MirrorReleases"
+            url = uri("https://crystal.app.lss233.com/repositories/releases")
+        }
+        maven {
+            name = "lss233MirrorMinecraft"
+            url = uri("https://crystal.app.lss233.com/repositories/minecraft")
+        }
+        maven {
+            name = "lss233MirrorSnapshots"
+            url = uri("https://crystal.app.lss233.com/repositories/snapshots")
+        }
+        maven { url = uri("https://maven.aliyun.com/repository/google") }
+        maven { url = uri("https://maven.aliyun.com/repository/jcenter") }
+        maven { url = uri("https://maven.aliyun.com/repository/public") }
         // Floodgate, Cumulus etc.
         maven("https://repo.opencollab.dev/main")
 
@@ -50,8 +69,8 @@ dependencyResolutionManagement {
 
 pluginManagement {
     repositories {
+        maven ("https://maven.aliyun.com/repository/gradle-plugin")
         gradlePluginPortal()
-
         maven("https://repo.opencollab.dev/maven-snapshots/")
         maven("https://maven.fabricmc.net/")
         maven("https://maven.architectury.dev/")
